@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
 Now, let's type `git status` to see what has changed in our repository.
 
-![git status](git_status.png "Git status")
+![git status](images/git_status.png "Git status")
 
 By default, the repository points to the **master** branch. We have not commited anything yet, so it shows no commits yet. Moreover, it shows `main.py` as an *untracked* file. You have to explicity tell git which files you want to track (see its changes).
 
@@ -62,17 +62,17 @@ Now, how do we make a commit? Commits is a two step process: **stage** and **com
 
 This two step process can be nicely represented in this graph:
 
-![git areas](areas.png "Working tree, staging area, commit")
+![git areas](images/areas.png "Working tree, staging area, commit")
 
 To **stage** a file, just type `git add <filename>`. For example, let's stage `main.py` by typing `git add main.py`
 
-![git add status](git_add_status.png "Git add and status")
+![git add status](images/git_add_status.png "Git add and status")
 
 You see that if we type `git status` again, it now shows that the contents of `main.py` have changed.
 
 Let's finally make a **commit**. Just type `git commit -m <message>`. In our case, we will type `git commit -m "First commit"`
 
-![git commit](git_commit.png "Git commit")
+![git commit](images/git_commit.png "Git commit")
 
 Congratulations, you have made your first commit!
 
@@ -101,7 +101,7 @@ if __name__ == '__main__':
 
 Now, let's do a `git status` and see what happens.
 
-![git add flavors](git_flavors_add.png "Status after more changes")
+![git add flavors](images/git_flavors_add.png "Status after more changes")
 
 **For tracked files** we always have two options: either add it to the staging area, or restore it. If you read the output of the command line it will be self explanatory but let's discuss it.
 
@@ -135,7 +135,7 @@ helper_classes/
 
 Now, if we do a `git status` again, we will see that the folder `helper_classes/` does no longer appear under the *untracked files* section.
 
-![.gitignore](.gitignore.png "Git ignore file")
+![.gitignore](images/.gitignore.png "Git ignore file")
 
 **Question:** Can you ignore the `.gitignore` file? No.
 
@@ -151,13 +151,13 @@ So far, our repo has been stored **locally**. But, we will like to share our awe
 
 Let's create a github repository to share our code. Go to github and create an empty repository call chatbox.
 
-![github](github.png "Creating new repo")
+![github](images/github.png "Creating new repo")
 
 **Click on create repository.**
 
 You will see a page similar to this one:
 
-![github-repo](github_repo.png "Github new repo initial page")
+![github-repo](images/github_repo.png "Github new repo initial page")
 
 **Let's examine each piece.**
 
@@ -246,11 +246,11 @@ Why will you ever need rebasing? Because we are humans and we might make mistake
 
 We can check that *history* by simply typing `git log`.
 
-![git log](git_log.png "Git log")
+![git log](images/git_log.png "Git log")
 
 Each commit has a *hash* number. We can get the short version of the hash by typing `git log --oneline`.
 
-![git log oneline](git_log_oneline.png "Git log --oneline")
+![git log oneline](images/git_log_oneline.png "Git log --oneline")
 
 The interesting part is that the hash number is calculated using the following:
 
@@ -269,7 +269,7 @@ We go into rebase mode by typing:
 
 You will see a screen like this:
 
-![git rebase](rebasing.png "Git rebasing")
+![git rebase](images/rebasing.png "Git rebasing")
 
 Google the options and check what exactly each commmand does. For more information, I recommend reading Atlassian articles in git. [Atlassian Git tutorial](https://www.atlassian.com/git/tutorials).
 
